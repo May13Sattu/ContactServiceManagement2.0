@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            margin: auto;
+            width: 50%;
+            padding: 30px;
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 data-th-text="${name}">Welcome to contact management</h1>
+        <p>Youtube : <span data-th-text="${Youtube}"></span></p>
+        <p data-th-text="${Youtube}">
+            Hello guys this is the jorney of Development.
+        </p>
+        <a th:href = "${youtube}"> Click here for link</a>
+    </div>
+</body>
+</html>
