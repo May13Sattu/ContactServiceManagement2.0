@@ -14,7 +14,7 @@ public class PageController {
         System.out.println("Hello project building started");
         //Sending data to view
         model.addAttribute("name","Cantanct Management Services");
-        model.addAttribute("Youtube", "Learning code with Sattu");
+        model.addAttribute("Youtube", "Learning code with Sattu dada");
         return "index";
     }
 }
