@@ -4,23 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        .container{
-            margin: auto;
-            width: 50%;
-            padding: 30px;
-            background-color: bisque;
-        }
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" data-th-href="@{/css/output.css}">
 </head>
 <body>
-    <div class="container">
-        <h1 data-th-text="${name}">Welcome to contact management</h1>
+    <div class="container bg-amber-100 w-1/2 p-4 mx-auto m-4 flex flex-col space-y-3 items-center" >
+        <h1 class="text-2xl font-bold" data-th-text="${name}">Welcome to contact management</h1>
         <p>Youtube : <span data-th-text="${Youtube}"></span></p>
         <p data-th-text="${Youtube}">
             Hello guys this is the jorney of Development.
         </p>
         <a th:href = "${youtube}"> Click here for link</a>
+        <div>
+            <button class="bg-amber-400 py-3 px-2.5 rounded bg-blue-600 text-white hover:bg-blue-500">Click here</button>
+        </div>
     </div>
+    <!-- flowbit content -->
+     
+
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
 </body>
 </html>

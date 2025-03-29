@@ -1,0 +1,27 @@
+{
+  "name": "contactservicemanagement2.0",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/May13Sattu/ContactServiceManagement2.0.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/May13Sattu/ContactServiceManagement2.0/issues"
+  },
+  "homepage": "https://github.com/May13Sattu/ContactServiceManagement2.0#readme",
+  "devDependencies": {
+    "tailwindcss": "^4.0.17"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.0.17"
+  }
+}
