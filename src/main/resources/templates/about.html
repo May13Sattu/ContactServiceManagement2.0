@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Page</title>
+</head>
+<body>
+    <h1>This is the About Page</h1>
+    <hr/>
+    <!-- Using fragments -->
+    <div th:replace="${isActive} ? ~{fragments/base:: parent(~{::#first_section})} : ~{fragments/base::test(~{::#second_section})}">
+        <section id="first_section">
+            <h1>This is first section</h1>
+        </section>
+        <section id="second_section">
+            <h1>This is second section</h1>
+        </section>
+    </div>
+</body>
+</html>
