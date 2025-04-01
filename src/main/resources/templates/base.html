@@ -1,0 +1,24 @@
+<!DOCTYPE html >
+<html lang="en" th:fragment="parent(content,title,script)" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:replace="${title}">CSM</title>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" data-th-href="@{/css/output.css}">
+    <link href="/your-path-to-uicons/css/uicons-[your-style].css" rel="stylesheet"> <!--load all styles -->
+</head>
+<body >
+    <!-- Common Header -->
+     <div th:replace="~{navbar :: navbar}"></div>
+    <!-- Main content  -->
+     <div class="body_part">
+        <section th:replace="${content}">
+            Base page conenct
+         </section>
+     </div>
+     <!-- Common footer -->
+    <!-- flowbit content -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <th:block th:replace="${script}">
+    </th:block>
+</body>
+</html>

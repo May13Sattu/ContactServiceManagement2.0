@@ -4,6 +4,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 
 @Controller
@@ -18,7 +20,7 @@ public class PageController {
         //Sending data to view
         model.addAttribute("name","Cantanct Management Services");
         model.addAttribute("Youtube", "Learning code with Sattu dada");
-        return "index";
+        return "home";
     }
 
     // about page
@@ -31,11 +33,25 @@ public class PageController {
     }
 
     // service page
-    @GetMapping("/services")
+    @GetMapping("/service")
     public String getSevicePage(Model model){ 
         System.out.println("Service page is called");
         //Sending data to view
         return "service"; // service page
     }
+
+    @GetMapping("/contact")
+    public String getContactPage() {
+        return "contact";
+    }
     
+    @GetMapping("/login")
+    public String getLoginPage(){
+        return "login"; // login page
+    }
+
+    @GetMapping("/register")
+    public String getRegisterPage(){
+        return "register"; // register page
+    }
 }
