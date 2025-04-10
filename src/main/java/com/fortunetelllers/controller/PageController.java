@@ -3,8 +3,18 @@ package com.fortunetelllers.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import com.fortunetelllers.entities.User;
+import com.fortunetelllers.forms.UserForm;
+
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+
 
 
 
@@ -51,7 +61,18 @@ public class PageController {
     }
 
     @GetMapping("/register")
-    public String getRegisterPage(){
+    public String getRegisterPage(Model model) {
+        model.addAttribute("userForm", new UserForm());
         return "register"; // register page
     }
+
+    @RequestMapping(value = "/do_registered", method=RequestMethod.POST)
+    public String doRegistered(@ModelAttribute("userForm") UserForm userForm) {
+        System.out.println("Processing registration for user: ");
+        System.out.println(userForm);
+        // UserForm userForm = new UserForm();
+        // model.addAttribute("userForm", userForm);
+        return "redirect:/usersservice/register"; // do_registered page
+    }
+    
 }
